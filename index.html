@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おこづかい九九</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  
+</head>
+<body>
+  <div class="fullscreen">
+
+    <div class="main_container">
+      <div class="button_config">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+      </div>
+      <h1>おこづかい九九</h1>
+      <select name="" id="player_select">
+        <option value="taichi">太一</option>
+        <option value="satsuki">彩月</option>
+        <option value="yui">結衣</option>
+        <option value="guest">ゲスト</option>
+      </select>
+      <p id="reward_row">おこづかい<span id="reward">0</span>円</p>
+      <p id="config_row">
+        <select name="" id="left_select">
+          <option id="column1" value="1">1のだん</option>
+          <option id="column2" value="2">2のだん</option>
+          <option id="column3" value="3">3のだん</option>
+          <option id="column4"value="4">4のだん</option>
+          <option id="column5" value="5">5のだん</option>
+          <option id="column6" value="6">6のだん</option>
+          <option id="column7" value="7">7のだん</option>
+          <option id="column8" value="8">8のだん</option>
+          <option id="column9" value="9">9のだん</option>
+        </select>
+        <select name="" id="order_select">
+          <option value="up">のぼり（1円）</option>
+          <option value="down">くだり（2円）</option>
+          <option value="random">ばら（5円）</option>
+        </select>
+        <button id="button_start" class=" button_start">スタート</button>
+      </p>
+      <p id="display_row">
+        <span id="left_side">□</span>
+        <span>×</span>
+        <span id="right_side">□</span>
+        <span>=</span>
+        <span id="answer"></span>
+      </p>
+      <table id="input_table">
+        <tr>
+          <td><button class="input_button" id="button_7" value="7">7</button></td>
+          <td><button class="input_button" id="button_8" value="8">8</button></td>
+          <td><button class="input_button" id="button_9" value="9">9</button></td>
+        </tr>
+        <tr>
+          <td><button class="input_button" id="button_4" value="4">4</button></td>
+          <td><button class="input_button" id="button_5" value="5">5</button></td>
+          <td><button class="input_button" id="button_6" value="6">6</button></td>      
+        </tr>
+        <tr>
+          <td><button class="input_button" id="button_1" value="1">1</button></td>
+          <td><button class="input_button" id="button_2" value="2">2</button></td>
+          <td><button class="input_button" id="button_3" value="3">3</button></td>
+        </tr>
+        <tr>
+          <td><button class="input_button" id="button_0" value="0">0</button></td>
+          <td colspan="2"><button class="input_button" id="button_c" value="clear">けす</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id="smoke" class="none"></div>
+    <div class="slide_menu">
+      <button id="close_button">×</button>
+      <p id="clear_reward">おこづかいをクリア</p> 
+    </div>
+    <div id="correct_mark" class="none">
+      <div id="circle"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" data-type="module" src=".\scripts\index.js"></script>
+</body>
+</html>

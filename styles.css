@@ -1,0 +1,208 @@
+@charset "UTF-8";
+.fullscreen {
+  width: 100vw;
+  height: 100Vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main_container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.button_config {
+  width: 24px;
+  margin-right: 8px;
+  margin-left: auto;
+  margin-top: 16px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  background-color: black;
+}
+
+.bar_white {
+  background-color: white;
+}
+
+h1,
+#display_row {
+  text-align: center;
+}
+
+#player_select {
+  font-size: 20px;
+}
+
+#reward_row {
+  font-size: 16px;
+}
+
+#config_row > select {
+  font-size: 16px;
+}
+
+.button_start {
+  background-color: white;
+  border: solid 2px blue;
+  color: blue;
+  border-radius: 4px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.button_start:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+#display_row {
+  font-size: 28px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.input_button {
+  font-size: 22px;
+  margin: 6px;
+  border-radius: 50%;
+  background-color: orange;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.input_button:active {
+  opacity: .3;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.button_disabled {
+  opacity: 0.3;
+}
+
+.button_disabled:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+#smoke {
+  position: absolute;
+  top: -16px;
+  left: -8px;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: .3;
+}
+
+.slide_menu {
+  position: absolute;
+  top: -16px;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: gray;
+  z-index: 30;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.slide_menu > p {
+  color: white;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.slide_menu > button {
+  background-color: gray;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 8px;
+  margin-top: 24px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slide {
+  position: absolute;
+  right: 0px;
+}
+
+#correct_mark {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#circle {
+  margin: 0 auto;
+  margin-top: 150px;
+  height: 220px;
+  width: 220px;
+  border: red 20px solid;
+  border-radius: 100%;
+}
+
+.none {
+  display: none;
+}
+
+/*##################### メディアクエリ########################## */
+/* タブレット */
+@media (max-width: 1024px) {
+  .main_container {
+    width: 65%;
+  }
+}
+
+/* スマホ */
+@media (max-width: 599px) {
+  .main_container {
+    width: 95%;
+  }
+}
+
+/*##################### アニメーション ########################## */
+.blinking {
+  -webkit-animation: flash .5s linear infinite;
+          animation: flash .5s linear infinite;
+}
+
+@-webkit-keyframes flash {
+  0%, 100% {
+    color: blue;
+  }
+  33% {
+    color: yellow;
+  }
+  66% {
+    color: red;
+  }
+}
+
+@keyframes flash {
+  0%, 100% {
+    color: blue;
+  }
+  33% {
+    color: yellow;
+  }
+  66% {
+    color: red;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
