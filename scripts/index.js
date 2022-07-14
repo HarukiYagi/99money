@@ -58,8 +58,8 @@
 
   //####ここでお小遣いのステップを調整＃＃＃
   const steps = {
-    taichi: {up: 2, down: 3, random: 5},
-    satsuki: {up: 1, down: 1, random: 3},
+    taichi: {up: 4, down: 6, random: 10},
+    satsuki: {up: 2, down: 2, random: 6},
     yui: {up: 1, down: 1, random: 2},
     guest: {up: 1, down: 2, random: 5},
   }
@@ -248,21 +248,20 @@
   }
 
   function showAnime(){
-    let message = '●○○○○○';
+    let message = 'お○○○○';
     h1.textContent = message;
     let i = 0;
     const messages = [
-      '○●○○○○',
-      '○○●○○○',
-      '○○○●○○',
-      '○○○○●○',
-      '○○○○○●',
-      '●○○○○○'
+      '○こ○○○',
+      '○○づ○○',
+      '○○○か○',
+      '○○○○い',
+      'お○○○○'
       ];
     intervalID = setInterval(()=>{
       if(i >= messages.length){
         i = 0;
-        message = '●○○○○○';
+        message = 'お○○○○';
       }
       message = messages[i];
       h1.textContent = message;
